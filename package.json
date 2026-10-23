@@ -1,0 +1,48 @@
+{
+  "name": "sunasty-qr-payload",
+  "version": "1.0.0",
+  "description": "Zero-dependency structured QR payload parser (Wi-Fi, 2FA TOTP otpauth://, vCard, mailto, MATMSG, SMS, tel, URL security analyzer) and RFC 6238 TOTP generator via Web Crypto SubtleCrypto.",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test.js"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "totp",
+    "otpauth",
+    "rfc6238",
+    "wifi",
+    "vcard",
+    "matmsg",
+    "parser",
+    "webcrypto"
+  ],
+  "author": "Sunasty <https://sunasty.com>",
+  "license": "MIT",
+  "homepage": "https://sunasty.com/qr-scan/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsulyan/sunasty-qr-payload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bsulyan/sunasty-qr-payload/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
