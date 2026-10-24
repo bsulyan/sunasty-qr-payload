@@ -1,0 +1,34 @@
+{
+  "title": "sunasty-qr-payload: Structured QR Code Payload Parser and Web Crypto RFC 6238 TOTP Engine",
+  "description": "Zero-dependency parser for structured QR code payloads (Wi-Fi, vCard, mailto, SMS, tel, OTPAuth) with real-time RFC 6238 HMAC-SHA1 Web Crypto token generation and canvas preprocessing algorithms.",
+  "creators": [
+    {
+      "name": "Sulyan, Bastien",
+      "affiliation": "Sunasty"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "qr-code",
+    "rfc6238",
+    "totp",
+    "wifi-qr",
+    "vcard",
+    "web-crypto",
+    "client-side"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://sunasty.com",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/bsulyan/sunasty-qr-payload",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "upload_type": "software"
+}
