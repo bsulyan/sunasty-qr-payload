@@ -27,7 +27,7 @@ import {
   parseQrPayload,
   generateTotpCode,
   analyzeUrlSecurity,
-} from 'https://cdn.jsdelivr.net/gh/bsulyan/sunasty-qr-payload@1.0.0/index.js';
+} from 'https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm';
 ```
 
 ## Usage
