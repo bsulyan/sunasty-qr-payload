@@ -1,5 +1,5 @@
 {
-  "name": "sunasty-qr-payload",
+  "name": "@sunasty/qr-payload",
   "version": "1.0.0",
   "description": "Zero-dependency structured QR payload parser (Wi-Fi, 2FA TOTP otpauth://, vCard, mailto, MATMSG, SMS, tel, URL security analyzer) and RFC 6238 TOTP generator via Web Crypto SubtleCrypto.",
   "type": "module",

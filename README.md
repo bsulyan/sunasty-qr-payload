@@ -1,4 +1,4 @@
-# sunasty-qr-payload
+# @sunasty/qr-payload
 
 Zero-dependency JavaScript and TypeScript parser for structured QR code payloads (`WIFI:`, `otpauth://totp/`, `BEGIN:VCARD`, `mailto:`, `MATMSG:`, `smsto:`, `sms:`, `tel:`, and HTTP/HTTPS URLs with security inspection) paired with a Web Crypto `SubtleCrypto` RFC 6238 TOTP generator and RFC 4180 CSV/JSON serializers.
 
@@ -14,10 +14,12 @@ Extracted from the core engine powering the [Sunasty QR Scanner](https://sunasty
 
 ## Installation
 
-Via npm:
+Via npm or JSR:
 
 ```bash
-npm install sunasty-qr-payload
+npm install @sunasty/qr-payload
+# or via JSR
+npx jsr add @sunasty/qr-payload
 ```
 
 Or import directly in browsers and Deno via ESM CDN (jsDelivr):
@@ -27,7 +29,7 @@ import {
   parseQrPayload,
   generateTotpCode,
   analyzeUrlSecurity,
-} from 'https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm';
+} from 'https://cdn.jsdelivr.net/npm/@sunasty/qr-payload@1.0.0/+esm';
 ```
 
 ## Usage
@@ -35,7 +37,7 @@ import {
 ### Parsing Structured QR Payloads
 
 ```js
-import { parseQrPayload } from 'sunasty-qr-payload';
+import { parseQrPayload } from '@sunasty/qr-payload';
 
 const wifi = parseQrPayload('WIFI:S:ProdNetwork;T:WPA2;P:SecretKey2026;H:false;;');
 // { kind: 'wifi', ssid: 'ProdNetwork', encryption: 'WPA2', password: 'SecretKey2026', hidden: false }
@@ -52,7 +54,7 @@ const urlInfo = parseQrPayload('http://192.168.1.1/login');
 ### Generating RFC 6238 2FA TOTP Codes
 
 ```js
-import { parseQrPayload, generateTotpCode } from 'sunasty-qr-payload';
+import { parseQrPayload, generateTotpCode } from '@sunasty/qr-payload';
 
 const parsed = parseQrPayload(
   'otpauth://totp/Sunasty:ops@sunasty.com?secret=JBSWY3DPEHPK3PXP&issuer=Sunasty'
@@ -72,7 +74,7 @@ if (parsed.kind === 'totp') {
 ### Exporting Scan History to RFC 4180 CSV
 
 ```js
-import { serializeScanHistoryToCsv } from 'sunasty-qr-payload';
+import { serializeScanHistoryToCsv } from '@sunasty/qr-payload';
 
 const csv = serializeScanHistoryToCsv([
   {
